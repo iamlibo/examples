@@ -5,4 +5,4 @@
 
 ## 目录
 
- [SpringBoot3.1使用HATEOAS增强API的活力](springboot-hateoas/README.adoc) 
+ [SpringBoot3.1使用HATEOAS增强API的活力](springboot-hateoas/README.md) 
