@@ -1,8 +1,12 @@
 # SpringBoot3.1使用HATEOAS增强API的活力
-> 示例项目
+
+> 示例项目：
+> 
 > JDK 17
 > SpringBoot 3.1.4 (当前最新版本)
+> 
 > Spring HATEOAS 2.1.2
+> 
 > Kotlin 1.8.22
 
 # 初始化项目
@@ -302,3 +306,29 @@ class UserController(@Autowired val userService: UserService) {
 # Gradle国内加速
 因为使用Gradle 管理项目，在下Gradle 及依赖的jar还比较慢。可以配置国内加速的办法。
 
+1. 先配置GRADLE_USER_HOME环境变量到Maven的仓库地址，注意是仓库地址（里面全是jar包的那个），不是maven的主目录
+
+```shell
+export GRADLE_USER_HOME="/env/repository" 
+```
+
+2. 下载Gradle到本地（/env/gradle-8.2.1），解压后修改init.d目录下的init.gradle 文件，没有创建即可。
+
+```groovy
+allprojects {
+    repositories {
+        maven { url '/env/repository'}
+        mavenLocal()
+        maven { name "Alibaba" ; url "https://maven.aliyun.com/nexus/content/groups/public/" }
+        mavenCentral()
+    }
+
+    buildscript { 
+        repositories { 
+            maven { name "Alibaba" ; url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        }
+    }
+}
+```
+
+3. 在没有打开任何项目的情况下（如果打开项目只能设置当前项目的gradle，不是全局的）打开ideaj-->settings--> 搜索gradle，在Gradle user home 选择前面下载的Gradle解压后的地址(/env/gradle-8.2.1)，这样在后续每个项目都不用单独下载Gradle了，而且能够使用aliyun的镜像了。
