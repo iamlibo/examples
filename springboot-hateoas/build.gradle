@@ -7,7 +7,7 @@ plugins {
 	id 'org.jetbrains.kotlin.plugin.spring' version '1.8.22'
 }
 
-group = 'cn.51liveup.examples'
+group = 'cn.myplus.examples'
 version = '0.0.1-SNAPSHOT'
 
 java {

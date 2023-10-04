@@ -1,0 +1,6 @@
+GET http://localhost:9999/user/admin
+Accept: application/json
+
+###
+GET http://localhost:9999/users?id=admin
+Accept: application/json

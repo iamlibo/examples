@@ -1,4 +1,4 @@
-package cn.liveup.examples.springboothateoas
+package cn.myplus.examples.springboothateoas
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

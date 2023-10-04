@@ -1,4 +1,4 @@
-package cn.liveup.examples.springboothateoas
+package cn.myplus.examples.springboothateoas
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
