@@ -1,0 +1,8 @@
+# examples
+
+## 介绍
+在学习和工作过程中的一些有意思的代码做一些记录。
+
+## 目录
+
+ [SpringBoot3.1使用HATEOAS增强API的活力](springboot-hateoas/README.adoc) 
